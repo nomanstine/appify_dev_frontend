@@ -1,15 +1,15 @@
-import axios from 'axios';
+// import axios from 'axios';
 import { DashboardData, FilterState } from '@/types/dashboard';
 import { mockDashboardData, mockNotifications, mockUserProfile, Notification, UserProfile } from './mockData';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || '/api';
-
-const api = axios.create({
-  baseURL: API_BASE_URL,
-  headers: {
-    'Content-Type': 'application/json',
-  },
-});
+// API instance for future use when connecting to real backend
+// const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || '/api';
+// const api = axios.create({
+//   baseURL: API_BASE_URL,
+//   headers: {
+//     'Content-Type': 'application/json',
+//   },
+// });
 
 // Simulate API delay for realistic loading states
 const simulateDelay = (ms: number = 1800) => 

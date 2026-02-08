@@ -3,6 +3,7 @@
 import { memo, useCallback } from 'react';
 import { useDashboardStore } from '@/store/dashboardStore';
 import { Calendar, Filter } from 'lucide-react';
+import { DateRange, UserType } from '@/types/dashboard';
 
 export const Filters = memo(function Filters() {
   const filters = useDashboardStore((state) => state.filters);
@@ -10,11 +11,11 @@ export const Filters = memo(function Filters() {
   const setUserType = useDashboardStore((state) => state.setUserType);
 
   const handleDateRangeChange = useCallback((e: React.ChangeEvent<HTMLSelectElement>) => {
-    setDateRange(e.target.value as any);
+    setDateRange(e.target.value as DateRange);
   }, [setDateRange]);
 
   const handleUserTypeChange = useCallback((e: React.ChangeEvent<HTMLSelectElement>) => {
-    setUserType(e.target.value as any);
+    setUserType(e.target.value as UserType);
   }, [setUserType]);
 
   return (
